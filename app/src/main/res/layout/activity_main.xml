@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hijautua"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/searchLayout"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivPokemonSprite"
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/pokemon_sprite"/>
+
+            <TextView
+                android:id="@+id/tvPokemonData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:background="@drawable/textview_background"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@drawable/cari_backgroud"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etPokemonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan nama Pokémon" />
+
+        <Button
+            android:id="@+id/btnSearchPokemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cari Pokémon"
+            android:backgroundTint="@color/hijau"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
